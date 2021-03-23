@@ -25,13 +25,14 @@ export class AuthenticationComponent implements OnInit {
   }
 
   getToken(): void {
-    if (this.email && this.password) {
-      // this.authenticationService.getAccessToken(this.email, this.password).subscribe(() => {
-      this.authenticationService.getAccessToken('dctime02@gmail.com', 'romain').subscribe(() => {
-        this.router.navigate(['team']);
-        this.badCredentials = !this.authenticationService.isLogged();
-      });
-    }
+    this.router.navigate(['diary']);
+    // if (this.email && this.password) {
+    //   // this.authenticationService.getAccessToken(this.email, this.password).subscribe(() => {
+    //   this.authenticationService.getAccessToken('dctime02@gmail.com', 'romain').subscribe(() => {
+    //     this.router.navigate(['team']);
+    //     this.badCredentials = !this.authenticationService.isLogged();
+    //   });
+    // }
 
   }
 
