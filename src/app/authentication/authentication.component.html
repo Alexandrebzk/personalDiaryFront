@@ -2,6 +2,9 @@
   <ng-container *ngIf="badCredentials">
     <mat-card class="error">Bad Credentials</mat-card>
   </ng-container>
+  <ng-container *ngIf="registered">
+    <mat-card class="error">You are registered !</mat-card>
+  </ng-container>
   <div class="input">
     <mat-form-field appearance="fill">
     <mat-label>Email</mat-label>
@@ -17,5 +20,6 @@
       </button>
     </mat-form-field>
   </div>
-  <button mat-button color="basic" (click)="getToken()">Login</button>
+  <button mat-button color="basic" (click)="login()">Login</button>
+  <button mat-button color="primary" (click)="createUser()">Register</button>
 </div>
